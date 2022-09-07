@@ -8,9 +8,9 @@
 
     'description': """
         1. 支持指定计算字段分组汇总
-        2. 快速编辑功能可控
-        3. 控制个人编辑区域显示效果
-        4. 设置系统标题
+        2. 个性化个人中心配置
+        3. 基础模型支持当前活动记录
+        4. 封装统一提示框
     """,
 
     'author': "Kevin Kong",
@@ -20,30 +20,24 @@
     # Check https://github.com/odoo/odoo/blob/13.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
     'category': 'basic',
-    'version': '15.2',
+    'version': '14.2',
 
     # any module necessary for this one to work correctly
     'depends': ['base'],
 
     # always loaded
     'data': [
-        'security/data.xml',
-        # 'security/ir.model.access.csv',
+        'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
-        'views/settings.xml'
+        "views/settings.xml",
+        "views/pops.xml"
+    ],
+    "qweb":[
+        "static/src/xml/web.xml"
     ],
     # only loaded in demonstration mode
     'demo': [
         'demo/demo.xml',
     ],
-    "assets": {
-        "web.assets_backend":[
-            "mommy_base/static/src/js/mommy.js",
-            # "mommy_base/static/src/js/relation_fields.js",
-        ],
-        "web.assets_qweb":[
-            "mommy_base/static/srx/xml/*"
-        ]
-    }
 }

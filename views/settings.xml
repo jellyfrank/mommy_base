@@ -1,27 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <record id="mommy_res_config_settings" model="ir.ui.view">
-            <field name="name">mommy settings</field>
+        <record id="view_res_config_settings" model="ir.ui.view">
+            <field name="name">customized odoo</field>
             <field name="model">res.config.settings</field>
             <field name="inherit_id" ref="base.res_config_settings_view_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//div[hasclass('settings')]" position="inside">
                     <div class="app_settings_block" data-string="mommy_base" string="Mommy" data-key="mommy_base">
-                        <h2>Comm Settings</h2>
-                        <div class="row mt16 o_settings_container">
-                            <div class="col-12 col-lg-6 o_setting_box" title="">
-                                <div class="o_setting_left_pane">
-                                    <field name="quick_edit"/>
-                                </div>
-                                <div class="o_setting_right_pane">
-                                    <b>X2Many Quick Edit</b>
-                                    <div class="text-muted">
-                                        Allow x2many field quick edit or not.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         <h2>Customized Your Odoo</h2>
                         <div class="row mt16 o_settings_container">
                             <div class="col-12 col-lg-6 o_setting_box" title="">
@@ -74,23 +60,7 @@
                             </div>
                         </div>
 
-                        <h2>Login Page Setting</h2>
-                        <div class="row mt16 o_settings_container">
-                            <div class="col-12 col-lg-6 o_setting_box" title="">
-                                <div class="o_setting_left_pane">
-                                    <field name="mommy_show_brand"/>
-                                </div>
-                                <div class="o_setting_right_pane">
-                                    <b>Show Odoo Brand</b>
-                                    <div class="text-muted">
-                                        show 'Powered by Odoo' on login page.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
-
-
                 </xpath>
             </field>
         </record>
